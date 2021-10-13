@@ -1,0 +1,115 @@
+---
+title: Home
+styled: true
+---
+
+<div class="container">
+  <div class="section" id="head">
+    <div class="latest">
+      <!-- {% assign latest = site.posts.first %}
+
+      <h1>{{ latest.title }}</h1>
+      <p>{{ latest.excerpt | strip_html | slice: 0, 120 | append: '...' }}</p>
+
+      <a href="{{ latest.url }}" class="button is-primary">Află mai multe</a> -->
+       {% include carousel.html height="50" unit="%" duration="7"%}   
+    </div>
+
+    <div class="about box">
+      <p style="text-align: justify;">
+        Asociația ROREG implementează proiectul
+        <b
+          >"Sprijin pentru eficientizarea gestionării și implementării FESI la
+          nivelul autorităților publice locale de la nivelul orașelor,
+          municipiilor și județelor din România"</b
+        >, COD SMIS 132349, fiind cofinanțat din Fondul European de Dezvoltare
+        Regională prin POAT 2014 – 2020. Obiectivul general al proiectului este
+        dezvoltarea activităților de cooperare intra și inter-regională la
+        nivelul județelor, orașelor și municipiilor din România prin sprijinul
+        oferit acestora în ceea ce privește creșterea eficienței gestionării și
+        implementării FESI.
+      </p>
+
+      <a
+        href="sprijin-pentru-eficientizarea-gestionării-și-implementării-fesi-la-nivelul-autorităților-publice-locale-de-la-nivelul-orașelor-municipiilor-și-județelor-din-românia.html"
+        class="has-text-white small"
+        >Află mai multe</a
+      >
+    </div>
+  </div>
+</div>
+
+<div class="section" id="map">
+  <div class="container">
+    <h2 class="has-text-primary is-hidden-touch">Harta Regiunilor de Dezvoltare din România</h2>
+    
+    <div class="columns is-vcentered">
+      <div class="column is-12-tablet is-3-desktop cards">
+        {% for agency in site.data.agencies %}
+        <div class="card" data-id="reg-{{ forloop.index }}">
+          <button type="button" class="button is-primary is-outlined" data-id="reg-{{ forloop.index }}">
+            <span class="has-text-weight-semibold">
+              {{ agency.title }}
+            </span>
+            <span class="icon">
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </span>
+          </button>
+          <div class="card-content">
+            <p class="address">{{ agency.address }}</p>
+
+            {% for phone in agency.phones %}
+              {% if phone.icon %}
+                <ion-icon name="{{ phone.icon }}"></ion-icon>
+                {{ phone.number }}
+              {% else %}
+                <ion-icon name="call-outline"></ion-icon>
+                {{ phone }}
+              {% endif %}
+              <br />
+            {% endfor %}
+
+            {% if agency.email %}
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto: {{ agency.email }}">{{ agency.email }}</a>
+
+              <br />
+            {% endif %}
+
+            <ion-icon name="globe-outline"></ion-icon>
+            <a href="{{ agency.url }}" target="_blank">{{ agency.url | replace: 'http://', '' | replace: 'https://', '' | replace: '/', '' | replace: 'www.', '' }}</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="column is-hidden-touch">
+        {% include roreg_map.html %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  {% include news-latest.html %}
+  
+  <div class="section">
+    <div class="highlight">
+      <h2>Aplicația RoReg</h2>
+      <div class="columns">
+        <div class="column" style="text-align: justify;">
+          Prin proiect va fi dezvoltată o aplicație IT, disponibilă tuturor autorităților publice locale din zona urbană și de la nivel județean, care să faciliteze schimbul de informații și bune practici.
+        </div>
+        <div class="column" style="text-align: justify;">
+          Aplicația IT va fi o soluție complexă care sprijină autoritățile publice și încurajează cooperarea între toate părțile interesate și care are ca subiect proiectele FESI (finanțate din toate Programele Operaționale), fiind un mijloc de sprijin orizontal pentru beneficiarii FESI.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-addon">
+  <div class="container">
+    Pentru informații detaliate despre celelalte programe cofinanțate de Uniunea Europeană, vă invităm să vizitați 
+    <a href="http://www.fonduri-ue.ro" target="_blank">www.fonduri-ue.ro</a>
+  </div>
+</div>

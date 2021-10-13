@@ -1,0 +1,61 @@
+<footer class="footer">
+  <div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a href="/" class="navbar-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109 32"><path d="M0,6H9.06C12,6,14,6.81,15.29,8.09A6,6,0,0,1,17,12.55v.06a6,6,0,0,1-3.94,5.91l4.57,6.67h-6.1l-3.86-5.8H5.31v5.8H0Zm8.84,9.19c1.78,0,2.84-.87,2.84-2.27v-.05c0-1.53-1.12-2.3-2.87-2.3H5.31v4.62Z"/><path d="M54.31,6h9c3,0,5,.77,6.24,2.05a6.08,6.08,0,0,1,1.7,4.46v.06a6.05,6.05,0,0,1-3.94,5.91l4.57,6.67H65.82L62,19.39H59.61v5.8h-5.3Zm8.83,9.19c1.78,0,2.85-.87,2.85-2.27v-.05c0-1.53-1.12-2.3-2.87-2.3H59.61v4.62Z"/><path d="M73.39,6h15.4v4.49H78.64v2.93h9.2v4.18h-9.2v3H88.93v4.51H73.39Z"/><path d="M90,15.67v-.05a9.94,9.94,0,0,1,10.29-10,11.16,11.16,0,0,1,7.77,2.76L105,12.2a6.56,6.56,0,0,0-4.62-1.81,5,5,0,0,0-4.9,5.23v.05a5.07,5.07,0,0,0,5.2,5.34,5.27,5.27,0,0,0,3.06-.8V17.89H99.94V14h8.79v8.59a12.58,12.58,0,0,1-8.32,3C94.42,25.57,90,21.5,90,15.67Z"/><path d="M35.4,0A16.2,16.2,0,0,0,19,16,16.2,16.2,0,0,0,35.4,32,16.19,16.19,0,0,0,51.78,16,16.19,16.19,0,0,0,35.4,0Zm0,27A11,11,0,1,1,46.27,16,10.94,10.94,0,0,1,35.4,27Z"/></svg>
+        </a>
+      </div>
+
+      <div class="is-hidden-desktop">
+        <p class="has-text-weight-semibold">
+          Asociația Agențiilor pentru <br />Dezvoltare Regională din România
+        </p>
+      </div>
+
+      <div class="navbar-menu is-active">
+        <div class="navbar-end">
+          {% for agency in site.data.agencies %}
+          <a href="{{ agency.url }}" class="navbar-item" target="_blank">{{agency.title}}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </nav>
+
+    <div class="columns">
+      <div class="column is-4-desktop is-3-widescreen is-hidden-touch">
+        <p class="has-text-weight-semibold">
+          Asociația Agențiilor pentru <br />Dezvoltare Regională din România
+        </p>
+      </div>
+      <div class="column is-4-desktop is-3-widescreen">
+        <p>
+          Str. Proclamația de la Timișoara, nr. 5, <br />
+          Etaj 1, 300054 Timișoara, România
+        </p>
+
+        <p>
+          <br />
+          <ion-icon class="icon" name="call-outline"></ion-icon> +40356-829528 <br />
+          <ion-icon class="icon" name="print-outline"></ion-icon> +40356-829529 <br />
+          <ion-icon class="icon" name="mail-outline"></ion-icon> <a href="mailto:office@roreg.eu">office@roreg.eu</a>
+        </p>
+      </div>
+      <div class="column is-3-desktop is-3-widescreen">
+        <p class="has-text-weight-semibold">Program de lucru</p>
+        <p>Luni-vineri: 08:30-17:00</p>
+      </div>
+    </div>
+
+    <div class="columns copyright">
+      <div class="column is-narrow">© Asociația RoReg 2020</div>
+      <div class="column">
+        <a href="/termeni-și-condiții.html">Termeni și condiții</a>&nbsp;&nbsp;&nbsp;
+        <a href="/gdpr.html">GDPR</a>
+      </div>
+      <div class="column">
+        Conținutul acestui material nu reprezintă în mod obligatoriu poziția oficială a Uniunii Europene sau a Guvernului României.
+      </div>
+    </div>
+  </div>
+</footer>

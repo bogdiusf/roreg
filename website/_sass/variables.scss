@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+// Set your brand colors
+$blue: #1E4D95;
+$blue-dark: #163C76;
+
+// Update Bulma's global variables
+$family-sans-serif: "Open Sans", sans-serif;
+$grey-darker: #212121;
+$grey-dark: #585858;
+$grey: #D6D6D6;
+$grey-light: #F8F8F8;
+$white: #FFFFFF;
+$black: $grey-darker;
+
+$text: $grey-darker;
+
+$primary: $blue;
+$primary-invert: $white;
+
+$gap: 24px;
+$size-7: 14px;
+$size-8: 12px;
+
+// $border: $primary;
+$control-height: 51px;
+$button-background-color: $primary;
+$button-color: $primary-invert;
+$button-padding-vertical: 1rem;
+$button-padding-horizontal: 1rem;
+
+$box-radius: 4px;
+$box-shadow: none;
+$box-background-color: $white;
+$box-padding: 16px;
+$block-spacing: 21px;
+
+$section-padding: 40px 0;
+$navbar-height: 3.1875rem;
+
+$card-shadow: none;
+$card-header-shadow: none;
+
+$footer-background-color: $grey;
+$footer-color: $grey-dark;
+$footer-padding: 20px 24px 24px;
+
+// Update some of Bulma's component variables
+$body-background-color: $grey-light;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+$input-shadow: none;
+
+@import "../../node_modules/bulma/sass/utilities/_all.sass";

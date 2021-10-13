@@ -1,0 +1,27 @@
+---
+list:
+  - title: Responsabilitate socială
+    description: |
+      Activitățile desfășurate de ROREG sunt în tandem cu normele sociale și etice. Ne dorim să fim trasnparenți, să promovăm bune practici și să oferim încredere beneficiarilor.
+  - title: Egalitate de gen
+    description: |
+      În cadrul Asociației ROREG este promovată egalitatea de gen. Astfel, se urmărește prevenirea și eliminarea oricăror comportamente disciriminatorii bazate pe citeriul de gen și se promovează o politică bazată pe egalitatea de șanse și tratament egal. Nu este permisă intimidarea, crearea unor medii ostile sau degradante, umile sau ofensatoare nici pentru angajații celor 8 Agenții pentru Dezvoltare Regională, nici pentru beneficiarii de fonduri europene sau colaboratorii și partenerii locali, regionali, naționali sau internaționali.
+  - title: Nediscriminare
+    description: |
+      Asociația ROREG se va asigura ca pe parcursul desfășurării activităților de orice fel nu vor apărea situații care să contravină prevederilor legale în domeniul egalității de șanse și discriminării. Se vor oferi tuturor categoriilor de persoane șanse egale, indiferent de rasă, sex, religie, vârsta și dizabilități.
+  - title: Sustenabilitate
+    description: |
+      Asociația ROREG va coordona proiecte de o natură durabilă, care să nu afecteze și să distorsioneze posibilele resurse de orice natură, protejând generațiile viitoare. Se urmărește reducerea consumului de energie și a resurselor folosite, prin digitalizarea proceselor.
+  - title: Ecologie
+    description: |
+      Asociația ROREG sprijină și susține un mediu înconjurător curat, cu un grad de poluare redus și o utilizare eficientă a resurselor. În cadrul achizițiilor, se vor solicita produse economice din punct de vedere al consumului de energie, se va promova o politică atentă de utilizare a hârtiei de birou, se va folosi hârtie reciclabilă și se va promova reducerea consumului de energie în toate activitățile desfășurate. De asemenea se promovează reciclarea deșeurilor și a utilizării de mijloace de transport cu un grad redus al nivelului emisiilor de carbon.
+---
+
+{% for item in page.list %}
+<p class="semibold-primary p-header">
+  {{ item.title }}
+</p>
+<p style="text-align: justify;">
+  {{ item.description }}
+</p>
+{% endfor %}

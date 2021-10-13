@@ -1,0 +1,109 @@
+{% capture projectFile %}{{ include.region.succesProjectsFile }}{% endcapture %} {% capture projectYmlPath %}site.data.{{
+include.region.succesProjectsFile }}{% endcapture %} {% capture regionFolder %}{{ include.region.file }}{% endcapture %}
+
+<div class="container">
+    <div class="accordion-widget" id="acordion_{{ projectFile }}">
+        {% for project in include.yml %}
+        <div class="box" data-id="{{ projectYmlPath }}" id="box_{{ regionFolder }}_{{ forloop.index }}">
+            {% capture imagesPath %}/regiuni/{{ include.region.file }}/{{ project.imagePath }}{% endcapture %} {% capture index %}{{ forloop.index
+            }}{% endcapture %}
+
+            <button
+                type="button"
+                id="button_{{ regionFolder }}_{{ index }}"
+                class="button trigger"
+                data-anchor="box_{{ regionFolder }}_{{ forloop.index }}"
+                onclick="onBoxButtonClick('{{ projectYmlPath }}/{{ index }}')"
+            >
+                <span class="buttontext">{{ project.title }} </span>
+                <ion-icon class="icon" name="chevron-down-circle-outline"></ion-icon>
+            </button>
+
+            <div class="content" data-id="{{ projectYmlPath }}" id="content_{{ regionFolder }}_{{ index }}">
+                <div class="slideshow-container" style="width: 85%">
+                    {% assign count = 0 %} {% for item in site.static_files %} {% if item.path contains imagesPath %} {% unless item.path contains
+                    'thumbs' %} {% assign count = count | plus: 1 %} {% endunless %} {% endif %} {% endfor %} {% assign slideIdx = 0 %} {% for item in
+                    site.static_files %} {% if item.path contains imagesPath %} {% unless item.path contains 'thumbs' %} {% assign slideIdx = slideIdx
+                    | plus: 1 %}
+                    <div class="mySlides fade" data-id="{{ projectYmlPath }}/{{ index }}">
+                        <div class="numbertext">{{ slideIdx }} / {{ count }}</div>
+                        <img src="{{ item.path }}" style="display: block; margin: auto; height: inherit" />
+                    </div>
+                    {% endunless %} {% endif %} {% endfor %}
+
+                    <a class="prevPic" onclick="plusSlides(-1, '{{ projectYmlPath }}/{{ index }}')">&#10094;</a>
+                    <a class="nextPic" onclick="plusSlides(1, '{{ projectYmlPath }}/{{ index }}')">&#10095;</a>
+                </div>
+
+                <br />
+                {% assign slideIdx = 0 %}
+
+                <div style="text-align: center">
+                    {% for item in site.static_files %} {% if item.path contains imagesPath %} {% if item.path contains 'thumbs' %} {% assign slideIdx
+                    = slideIdx | plus: 1 %}
+                    <img
+                        src="{{ item.path }}"
+                        style="width: 50px; height: 50px"
+                        class="dot"
+                        data-id="{{ projectYmlPath }}/{{ index }}"
+                        onclick="currentSlide('{{ slideIdx }}', '{{ projectYmlPath }}/{{ index }}')"
+                    />
+                    {% endif %} {% endif %} {% endfor %}
+                </div>
+
+                <div class="table-container" style="position: relative; margin-top: 2%">
+                    <div style="font-size: 12px; padding: 2.5%">{{ project.description }}</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    var slideIndex = 1
+
+    function showFirstSlide(projectNumber) {
+        showSlides(1, projectNumber)
+    }
+
+    function onBoxButtonClick(projectNumber) {
+        showFirstSlide(projectNumber)
+    }
+
+    function plusSlides(n, projNumber) {
+        showSlides((slideIndex += n), projNumber)
+    }
+
+    function currentSlide(n, projNumber) {
+        showSlides((slideIndex = n), projNumber)
+    }
+
+    function showSlides(n, projNumber) {
+        var i
+        var slides = document.querySelectorAll('div[data-id="' + projNumber + '"]')
+
+        var dots = document.querySelectorAll('img[data-id="' + projNumber + '"]')
+
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none'
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(' active', '')
+        }
+        if (slides[slideIndex - 1]) {
+            slides[slideIndex - 1].style.display = 'block'
+            dots[slideIndex - 1].className += ' active'
+            if (dots[slideIndex - 1].className == ' active') {
+                dots[slideIndex - 1].toggleClass(' active')
+            }
+        }
+    }
+</script>

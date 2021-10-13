@@ -1,0 +1,198 @@
+<div class="vid-main-wrapper clearfix">
+
+    <!-- THE PLAYER -->
+<div class="vid-container">
+    <video controls id="vid_frame">
+        <source src="../assets/files/downloads/SorinSecretarDeStat.mp4" type="video/mp4"></source>
+        <!-- fallback content here -->
+      </video>
+</div>
+
+
+
+<!-- THE PLAYLIST -->
+<div class="vid-list-container">
+  <ol id="vid-list">
+
+    <li>
+        <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='../assets/files/downloads/SorinSecretarDeStat.mp4'">
+          <span class="vid-thumb"><img width=92 src="../assets/files/downloads/SorinSecretarDeStat.png" /></span>
+          <div class="desc">Introducere</div>
+        </a>
+      </li>
+
+    <li>
+      <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='../assets/files/downloads/SorinComisar.mp4'">
+        <span class="vid-thumb"><img width=92 src="../assets/files/downloads/SorinComisar.png" /></span>
+        <div class="desc">Viziunea UE asupra dezvoltarii regionale in 2021-2027</div>
+      </a>
+    </li>
+    
+
+    <li>
+      <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='../assets/files/downloads/Panelul1.mp4'">
+        <span class="vid-thumb"><img width=92 src="../assets/files/downloads/Panelul1.png" /></span>
+        <div class="desc">Regiunile din Romania - trecut, prezent si viitor</div>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='../assets/files/downloads/Panelul1.mp4'">
+        <span class="vid-thumb"><img width=92 src="../assets/files/downloads/Panelul1.png" /></span>
+        <div class="desc">Panel 1 - Regiuni verzi</div>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='../assets/files/downloads/Panelul2.mp4'">
+        <span class="vid-thumb"><img width=92 src="../assets/files/downloads/Panelul2.png" /></span>
+        <div class="desc">Panel 2 - Instrumente de dezvoltare urbana</div>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='../assets/files/downloads/Panelul3.mp4'">
+        <span class="vid-thumb"><img width=92 src="../assets/files/downloads/Panelul3.png" /></span>
+        <div class="desc">Panel 3 - Regiuni inovatoare</div>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='../assets/files/downloads/Panelul4.mp4'">
+        <span class="vid-thumb"><img width=92 src="../assets/files/downloads/Panelul4.png" /></span>
+        <div class="desc">Panel 4 - Dezvoltarea capacitatii administrative la nivel regional</div>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='../assets/files/downloads/Concluzii.mp4'">
+        <span class="vid-thumb"><img width=92 src="../assets/files/downloads/Concluzii.png" /></span>
+        <div class="desc">Concluzii</div>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+</div>
+
+<style>
+
+  		.title {
+  			width: 100%;
+  			max-width: 854px;
+  			margin: 0 auto;
+  		}
+
+  		.caption {
+  			width: 100%;
+  			max-width: 854px;
+  			margin: 0 auto;
+  			padding: 20px 0;
+  		}
+
+  		.vid-main-wrapper {
+  			width: 100%;
+  			max-width: 1100px;
+  			min-width: 440px;
+  			background: #222;
+  			margin: 0 auto;
+  		}
+
+
+  		/*  VIDEO PLAYER CONTAINER
+ 		############################### */
+  		.vid-container {
+		    position: relative;
+		    padding-bottom: 52%;
+		    padding-top: 30px; 
+		    height: 0; 
+            width:70%;
+            float:left;
+		}
+		 
+		.vid-container video,
+		.vid-container object,
+		.vid-container embed {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    min-height: 360px;
+		}
+
+
+		/*  VIDEOS PLAYLIST 
+ 		############################### */
+		.vid-list-container {
+			width: 30%;
+            height:360px;
+                    overflow: hidden;
+            float:right;
+                }
+
+            .vid-list-container:hover, .vid-list-container:focus {
+            overflow-y: auto;
+            }
+
+        ol#vid-list {
+            margin:0;
+            padding:0;
+            background: #222;
+                }
+
+        ol#vid-list li {
+            list-style: none;
+            text-align: left;
+        }
+
+    ol#vid-list li a {
+      text-decoration: none;
+      background-color: #222;
+      height:55px;
+      display:block;
+      padding:5px;
+    }
+
+    ol#vid-list li a:hover {
+      background-color:#666666
+    }
+
+		.vid-thumb {
+      float:left;
+			margin-right: 8px;
+		}
+
+    .active-vid { 
+      background:#3A3A3A;
+    }
+
+		#vid-list .desc {
+			color: #CACACA;
+			font-size: 9px;
+			margin-top:5px;
+		}
+
+
+		@media (max-width: 624px) {
+			body {
+				margin: 15px;
+			}
+			.caption {
+				margin-top: 40px;
+			}
+			.vid-list-container {
+				padding-bottom: 20px;
+			}
+
+		}
+</style>
+
+<script>
+    /*JS FOR SCROLLING THE ROW OF THUMBNAILS*/ 
+$(document).ready(function () {
+  $('.vid-item').each(function(index){
+    $(this).on('click', function(){
+      var current_index = index+1;
+      $('.vid-item .thumb').removeClass('active');
+      $('.vid-item:nth-child('+current_index+') .thumb').addClass('active');
+    });
+  });
+});
+</script>

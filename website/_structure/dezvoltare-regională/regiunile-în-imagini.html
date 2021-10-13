@@ -1,0 +1,64 @@
+---
+layout: default
+styled: true
+---
+
+<div class="container">
+  <div class="page-container">
+    <h2 class="heading">Regiunile de dezvoltare în imagini</h2>
+  </div>
+
+  <div class="box tabs-widget">
+    <div class="tabs is-hidden-touch">
+      <ul>
+      {% for region in site.data.regions %}
+        <li><a data-href="#{{ region.file }}">{{ region.file | replace: '_', ' ' }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+
+    <div class="is-hidden-desktop">
+      <div class="select is-white is-fullwidth tab-select">
+        <select>
+        {% for region in site.data.regions %}
+          <option value="#{{ region.file }}">{{ region.file | replace: '_', ' ' }}</option>
+        {% endfor %}
+        </select>
+      </div>
+    </div>
+
+    {% for region in site.data.regions %}
+    <div class="tab-content" id="{{ region.file }}">
+      <h2>{{ region.title }}</h2>
+      
+      <div class="page-container">
+        {{ region.description }}
+      </div>
+      
+      {% capture region_path %}regiuni/{{ region.file }}{% endcapture %}
+      
+      {% if region.preluc %}
+        <div class="gallery">
+          <p class="has-text-weight-semibold">
+            În prelucrare
+          </p>
+        </div>  
+      {% else %}
+        <div class="gallery">
+          <p class="has-text-weight-semibold">
+            Fotografii din regiune
+          </p>
+          {% include lightbox.html path=region_path type='regiune' %}
+        </div>
+
+        <div class="gallery">
+          <p class="has-text-weight-semibold">
+            Fotografii ale proiectelor
+          </p>
+          {% include lightbox.html path=region_path type='proiecte' %}
+        </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,65 @@
+- title: Regiunea Nord-Est
+  file: Nord-Est
+  succesProjectsFile: projectsNordEst
+  footnote: |
+    Valorile din tabel sunt valabile pentru anul 2018. Valorile marcate cu * sunt reprezentative pentru anul 2017.
+    <br/>Surse: TEMPO și Eurostat
+  description: |
+    Regiunea Nord-Est cuprinde 6 județe: Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui, fiind cea mai mare și cea mai populată regiune din România. Din punct de vedere economic, regiunea cuprinde importante clustere de afaceri din sectoarele textilelor, agro-alimentar, biotehnologii și industrii creative. De asemenea, o dezvoltare importantă o au și sectoarele IT&C și farmaceutic. Regiunea este recunoscută pentru unicitatea monumentelor UNESCO și potențialul balneo-climateric.
+- title: Regiunea Sud-Est
+  file: Sud-Est
+  succesProjectsFile: projectsSudEst
+  footnote: |
+    Valorile din tabel sunt valabile pentru anul 2018. Valorile marcate cu * sunt reprezentative pentru anul 2016.
+    <br/>Surse: TEMPO și Eurostat
+  description: |
+    Regiunea Sud-Est este a doua ca mărime din cele 8 regiuni ale României și cuprinde 6 județe: Brăila, Buzău, Constanța, Galați, Tulcea și Vrancea. Datorită poziționării sale, regiunea are o importanță geopolitică și geostrategică deosebită. Regiunea se remarcă prin deschiderea la Marea Neagră și prezența Deltei Dunării (Rezervație a Biosferei), aceste elemente oferind un potențial turistic semnificativ. Alte ramuri economice importante sunt agricultura și industria navală.
+- title: Regiunea Sud Muntenia
+  file: Sud_Muntenia
+  succesProjectsFile: projectsSudMuntenia
+  preluc: True
+  footnote: |
+    Valorile din tabel sunt valabile pentru anul 2018. Valorile marcate cu * și ** sunt reprezentative pentru anul 2017, respectiv anul 2016.
+    <br/>Surse: TEMPO și Eurostat
+  description: |
+    Regiunea Sud-Muntenia este alcătuită din 7 județe: Argeș, Călărași, Dâmbovița, Giurgiu, Ialomița, Prahova și Teleorman. Regiunea este bine cunoscută pentru construcția de mașini (Fabrica Dacia) și resursele naturale (industria petro-chimică). Prezența extinsă a Câmpiei Române a determinat ca această regiune să aibă un potențial important în dezvoltarea agriculturii. De asemenea, regiunea are un potențial ridicat pentru dezvoltarea turismului și agroturismului.
+- title: Regiunea Sud-Vest Oltenia
+  file: Sud-Vest_Oltenia
+  succesProjectsFile: projectsSudVestOltenia
+  footnote: |
+    Valorile din tabel sunt valabile pentru anul 2018. Valorile marcate cu * sunt reprezentative pentru anul 2017.
+    <br/>Surse: TEMPO și Eurostat
+  description: |
+    Regiunea Oltenia se află în zona de sud-vest a României și este compusă din 5 județe: Dolj, Gorj, Mehedinți, Olt și Vâlcea. Localizarea Regiunii Oltenia este favorabilă în special pentru agricultură și prelucrarea produselor agricole, piscicultură, turism și hidroenergie (fluviul Dunărea și râul Olt). Regiunea cuprinde următoarele sectoare industriale: metalurgică, constructoare de mașini (fabrica FORD), aeronautică și construcții navale, chimică, energie electrică și termică, prelucrarea lemnului și industrie ușoară.  
+- title: Regiunea Vest
+  file: Vest
+  succesProjectsFile: projectsVest
+  footnote: |
+    Valorile din tabel sunt valabile pentru anul 2018. Valorile marcate cu * sunt reprezentative pentru anul 2017.
+    <br/>Surse: TEMPO și Eurostat
+  description: |
+    Regiunea Vest este alcătuită din patru județe: Arad, Caraș-Severin, Hunedoara și Timiș. Regiunea are o economie dinamică și diversificată. Cele mai importante sectoare sunt automotive, IT&C, agricultură și industrie alimentară, industria prelucrătoare și este puternic orientată spre export (locul II la nivel național). Regiunea Vest are un caracter multicultural important, Timișoara fiind desemnată Capitală Europeană a Culturii pentru anul 2021.
+- title: Regiunea Nord-Vest
+  file: Nord-Vest
+  succesProjectsFile: projectsNordVest
+  footnote: |
+    Valorile din tabel sunt valabile pentru anul 2018. Valorile marcate cu * și ** sunt reprezentative pentru anul 2017, respectiv anul 2015.
+    <br/>Surse: TEMPO și Eurostat
+  description: |
+    Regiunea de Dezvoltare Nord-Vest reunește 6 județe ale Transilvaniei: Bihor, Bistriţa-Năsăud, Cluj, Maramureş, Satu Mare şi Sălaj. Poziționarea strategică în zona de  graniță îi oferă avantaje majore din punct de vedere economic, social şi cultural. În regiune se regăsesc importante companii din diverse domenii, precum: IT, energii regenerabile, agro-alimentar și industrii creative. Diversitatea cadrului natural și amprenta culturală au dat naștere la importante zone turistice (stațiunile Băile Felix și Sârgeorz-Băi sau Centrul Istoric al municipiului Oradea. 
+- title: Regiunea Centru
+  file: Centru
+  succesProjectsFile: projectsCentru
+  footnote: |
+    Valorile din tabel sunt valabile pentru anul 2018. Valorile marcate cu * sunt reprezentative pentru anul 2017.
+    <br/>Surse: TEMPO și Eurostat
+  description: |
+    Regiunea Centru este formată din 6 județe: Alba, Braşov, Covasna, Harghita, Mureş, Sibiu. Parte a provinciei istorice Transilvania, regiunea este caracterizată de o mare diversitate etnică și lingvistică. În ceea ce privește economia, serviciile au cea mai mare pondere, dar se remarcă și industrii precum: cea alimentară, automotive, aeronautică și farmaceutică. Cadrul natural plasează regiunea pe primul loc la nivel național din punct de vedere al potenţialului turistic montan. Turismul cultural, precum și turismul rural sunt de asemenea reprezentative.
+- title: Regiunea București-Ilfov
+  file: Bucuresti-Ilfov
+  succesProjectsFile: projectsBucurestiIlfov
+  footnote: |
+    Valorile din tabel sunt valabile pentru anul 2018. Valorile marcate cu * și ** sunt reprezentative pentru anul 2017, respectiv anul 2016.
+    <br/>Surse: TEMPO și Eurostat
+  description: |
+    Regiunea București-Ilfov este localizată în sudul României, în centrul Câmpiei Române, fiind o regiune unică datorită poziționării capitalei București ca nucleu, constituind la nivel național, principalul pol economic (peste 27% din PIB-ul național) și demografic (cea mai mare aglomerare urbană din țară), respectiv nod strategic de transport (rutier, feroviar si aeroportuar). Cercetarea și inovarea sunt puternic dezvoltate în regiune, aici fiind localizat și Centrul ELI-NP- centru de renume mondial.

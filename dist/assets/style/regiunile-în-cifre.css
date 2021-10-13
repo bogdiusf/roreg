@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@keyframes spinAround { from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); } }
+
+.accordion-widget .table-container { margin-left: -48px; margin-right: -48px; max-width: 1000px; overflow-x: auto; border: 1px solid #D6D6D6; border-width: 1px 0; padding: 0 24px; background: #FFFFFF; }
+
+@media screen and (min-width: 1008px) { .accordion-widget .table-container { margin-left: 0; margin-right: 0; border: 0; padding: 0; } }
+
+.accordion-widget .content .button { height: 33px; font-size: 12px; }
+
+@media screen and (min-width: 1008px) { .accordion-widget .content .button { height: 35px; font-size: 14px; } }
+
+/*# sourceMappingURL=regiunile-în-cifre.css.map */

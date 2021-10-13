@@ -1,0 +1,238 @@
+---
+---
+
+@import 'variables';
+
+#head {
+  // .latest {
+  //   color: $white;
+  //   padding: 24px 32px 116px 24px;
+  //   background: $black url('/assets/img/poze_stiri/18032021_eeagrants.png') center center no-repeat;
+  //   background-attachment: cover;
+  //   position: relative;
+  //   background-size: auto;
+
+  //   > * {
+  //     position: relative;
+  //     z-index: 2;
+  //   }
+
+  //   &:after {
+  //     display: block;
+  //     content: '';
+  //     background-color: $grey-darker;
+  //     opacity: 0.7;
+  //     z-index: 1;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //   }
+
+  //   @include desktop {
+  //     padding: 80px 72px 144px;
+  //   }
+
+  //   h1 {
+  //     margin-bottom: 16px;
+  //     max-width: 650px;
+  //   }
+
+  //   p {
+  //     max-width: 460px;
+  //     margin-bottom: 24px;
+  //   }
+
+  //   margin-left: -24px;
+  //   margin-right: -24px;
+
+  //   @include desktop {
+  //     margin: 0;
+  //   }
+  // }
+
+  .about {
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+    padding: 16px 20px 24px;
+    z-index: 3;
+    position: relative;
+
+    p {
+      font-size: $size-7;
+      margin-bottom: 16px;
+
+      @include desktop {
+        font-size: inherit;
+      }
+    }
+
+    margin-top: -56px;
+
+    @include desktop {
+      margin-top: -120px;
+      max-width: 570px;
+      margin-left: auto;
+      margin-right: 32px;
+    }
+  }
+}
+
+#main {
+  @include touch {
+    padding-top: 0;
+  }
+}
+
+#map {
+  @include desktop {
+    background-color: #ededed;
+  }
+
+  h2 {
+    margin: 16px 0 0;
+  }
+
+  .cards {
+    padding-top: 56px;
+  }
+  
+  .card {
+    background-color: transparent;
+    border: 1px solid $primary;
+    border-radius: $radius;
+    // max-height: 53px;
+    // transition: max-height .5s;
+
+    .button {
+      width: 100%;
+      justify-content: space-between;
+      border: 0;
+      border-radius: 0;
+
+      &:focus {
+        color: inherit;
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+
+    .card-content {
+      font-size: $size-7;
+      display: none;
+      padding: 0 16px 24px;
+
+      .address {
+        margin-bottom: 8px;
+      }
+
+      a:not(:hover) {
+        text-decoration: none;
+      }
+
+      ion-icon {
+        // width: 12px;
+        padding-right: 16px;
+      }
+    }
+
+    &.is-active {
+      background-color: $primary;
+      color: $white;
+      // max-height: 1000px;
+
+      a,
+      .button {
+        color: $white;
+      }
+
+      .card-content {
+        display: block;
+      }
+
+      .icon > * {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .card + .card {
+    margin-top: 8px;
+  }
+
+  svg {
+    > g {
+      cursor: pointer;
+    }
+
+    #Outlines,
+    #Region_tags,
+    #Counties {
+      pointer-events: none;
+    }
+
+    #Regiuni {
+      path,
+      polygon {
+        transition: fill 0.15s;
+      }
+
+      .is-active {
+        fill: $primary;
+      }
+    }
+
+    #Region_tags {
+      .is-active {
+        text {
+          fill: $primary;
+        }
+
+        rect,
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    #Counties {
+      .is-active {
+        text {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+.highlight {
+  border-radius: $box-radius;
+  background-color: $primary;
+  color: $white;
+  padding: 20px 20px 24px;
+  font-size: $size-7;
+
+  @include desktop {
+    padding: 32px 48px 56px;
+    margin: 40px 0 80px;
+    font-size: $size-6;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+}
+
+.footer-addon {
+  background-color: $white;
+  padding: 24px;
+  color: $grey-dark;
+  font-size: $size-7;
+  margin: 0 -24px -80px;
+
+  @include desktop {
+    margin: 0 0 -120px;
+  }
+}

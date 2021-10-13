@@ -1,0 +1,22 @@
+- name: ROREG
+  submenu:
+      - Istoric
+      - Misiune
+      - Viziune
+      - Conducere
+      - Teme orizontale
+      - Cariere
+- name: Dezvoltare Regională
+  submenu:
+      - Legea Dezvoltării Regionale
+      - Regiunile în cifre
+      - Regiunile în imagini
+      - Specializare inteligentă
+- name: Fonduri Europene
+  submenu:
+      - Catalogul finanțărilor disponibile
+      - Perioade de programare
+      - Regulamente Europene
+      - Studii și analize
+- name: Proiecte de succes
+- name: Noutăți

@@ -1,0 +1,81 @@
+- title: ADR Nord-Est
+  address: Piatra Neamț, Str. Lt. Drăghescu, nr. 9, jud. Neamț
+  phones:
+    - '+40233-218071'
+    - '+40233-224168'
+    - icon: print-outline
+      number: '+40233-218072'
+  email: adrnordest@adrnordest.ro
+  url: https://www.adrnordest.ro/
+- title: ADR Sud-Est
+  address: Brăila, Str. Anghel Saligny, nr. 24, jud. Brăila
+  phones:
+    - '+40239-611086'
+    - '+40339-401018'
+    - '+40339-401019'
+    - '+40339-401020'
+    - icon: print-outline
+      number: '+40239-611066'
+    - icon: print-outline  
+      number: '+40339-401017'
+  email: adrse@adrse.ro
+  url: http://www.adrse.ro
+- title: ADR Sud Muntenia
+  address: Str. General Constantin Pantazi, nr. 7A, Călărași, jud. Călărși
+  phones:
+    - '+40242-331769'
+    - '+40728-026708'
+    - icon: print-outline
+      number: '+40242-313167'
+  email: office@adrmuntenia.ro
+  url: https://www.adrmuntenia.ro/
+- title: ADR Sud-Vest Oltenia
+  address: Aleea Teatrului, nr. 1, Craiova, jud. Dolj
+  phones:
+    - '+40251-411869'
+    - '+400251-414904'
+    - icon: print-outline
+      number: '+40351-463966'
+  email:
+  url: https://www.adroltenia.ro/
+- title: ADR Vest
+  address: Str. Gheorghe Lazăr, nr. 14 300080, Timisoara, România
+  phones:
+    - '+40256-491923'
+    - '+40746-156521'
+    - icon: print-outline
+      number: '+40256-491981'
+  email: office@adrvest.ro
+  address: Str. Gheorghe Lazăr, nr. 14 300080, Timisoara, România
+  phones:
+    - '+40256-491923'
+    - '+40746-156521'
+    - icon: print-outline
+      number: '+40256-491981'
+  email: office@adrvest.ro
+  url: http://adrvest.ro
+- title: ADR Nord-Vest
+  address: Sediul Principal în Sat Rădaia, nr. 50, Comuna Baciu, jud. Cluj, Sediul Secundar pe Calea Dorobanților, nr. 3, Cluj Napoca, jud. Cluj
+  phones:
+    - '+40264-431550'
+    - icon: print-outline
+      number: '+40264-439222'
+  email: secretariat@nord-vest.ro
+  url: https://www.nord-vest.ro/
+- title: ADR Centru
+  address: Strada Decebal, nr. 12, Alba Iulia, jud. Alba
+  phones:
+    - '+40258-818616'
+    - icon: print-outline
+      number: '+40258-818613'
+  email: office@adrcentru.ro
+  url: http://www.adrcentru.ro/
+- title: ADR București-Ilfov
+  address: Mihai Eminescu nr.163, et. 2, sector 2, București
+  phones:
+    - '+40213-159659'
+    - '+40213-138099'
+    - icon: print-outline
+      number: '+40213-159665'
+  email: contact@adrbi.ro
+  url: https://www.adrbi.ro/

@@ -1,0 +1,150 @@
+---
+layout: default
+styled: true
+---
+
+
+
+<div class="container">
+  
+  <div class="box tabs-widget">
+    <div class="tabs is-hidden-touch">
+      <ul>
+        {% for region in site.data.regions %}
+        <li><a data-href="#ps_{{ region.file }}" onclick="onTabChange('{{ region.succesProjectsFile }}')">{{ region.file | replace: '_', ' ' }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    
+    <div class="is-hidden-desktop">
+      <div class="select is-white is-fullwidth tab-select">
+        <select>
+          {% for region in site.data.regions %}
+          <option value="#ps_{{ region.file }}">{{ region.file | replace: '_', ' ' }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    
+    {% for region in site.data.regions %}
+    <div class="tab-content" id="ps_{{ region.file }}">
+      
+      <h2>Lista proiectelor de succes a regiunii {{ region.file | replace: '_', ' ' }}</h2><br>
+      {% if region.file == 'Sud_Muntenia' %}
+      <div class="gallery">
+        <p class="has-text-weight-semibold">
+          În prelucrare
+        </p>
+      </div>
+      {% endif %}
+      {% assign file = site.data[region.succesProjectsFile] %}
+      
+      {% include succes-projects.html yml=file region=region%}
+      
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  var slideIndex = 1;
+  var currentProject ;
+  var slideTimer ;
+  
+  
+  function onTabChange(projectFile){
+    // console.log("evenimentul click pe Tab: " + projectFile);
+    slideIndex = 1;
+    stopSlideTimer();
+    //closeAllBoxes(projectFile);
+  }
+  
+  // function closeAllBoxes(projectFile, boxid){
+    //   let acordion = document.getElementById('acordion_' + projectFile);
+    //   let boxes = acordion.getElementsByClassName('box');
+    //   for (let i = 0; i < boxes.length; i++){
+      //     if(boxes[i].className == 'box is-active' && boxes[i].getAttribute('id').valueOf() !== boxid){
+        //       $( "#"+boxes[i].getAttribute('id')).toggleClass( 'is-active' );
+        //     }
+        //   }
+        // }
+        
+        function stopSlideTimer(){
+          if(slideTimer){
+            clearTimeout(slideTimer);
+            slideTimer = null;
+          }
+        }
+        
+        function showFirstSlide(projectNumber){
+          showSlides(slideIndex = 1, projectNumber);
+        }
+        
+        function onBoxButtonClick(projectNumber, boxid){
+          // console.log('evenimentul click pe buton - projectNumber '+projectNumber);
+          stopSlideTimer();
+          //closeAllBoxes(document.getElementById(boxid).getAttribute('succesPF').valueOf(), boxid);
+          //$( "#"+boxid).toggleClass( 'is-active' ); //nu mai e nevoie
+          currentProject = projectNumber;
+          slideIndex = 1;
+          showFirstSlide(projectNumber);
+        }
+        
+        
+        function plusSlides(n, projNumber) {
+          if (slideTimer) {
+            // console.log(slideTimer);
+            stopSlideTimer(); //close the timer if we choose to scroll the images ourselves
+            showSlides(slideIndex , projNumber, false);
+          } else {
+            // console.log('slideindex='+slideIndex);
+            showSlides(slideIndex += n, projNumber, false);
+          }
+          
+        }
+        
+        function currentSlide(n, projNumber) {
+          stopSlideTimer(); //close the timer if we choose one specific photo
+          showSlides(slideIndex = parseInt(n), projNumber, false);
+        }
+        
+        
+        function showSlides(n, projNumber, automatic = true) {
+          var i;
+          var slides = document.querySelectorAll('div[data-id="'+projNumber+'"]');
+          // console.log(slides);
+          // console.log('projNumber '+projNumber);
+          // console.log('nb photos ' + slides.length);
+          // console.log('index photo ' + slideIndex);
+          
+          var dots = document.querySelectorAll('img[data-id="'+projNumber+'"]');
+          
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          if(slides[slideIndex-1]){
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += ' active';
+            if (dots[slideIndex-1].className == ' active'){
+              dots[slideIndex-1].toggleClass(" active");
+            }
+          }
+          
+          if (automatic) {
+            slideTimer = setTimeout(function(){ showSlides(slideIndex, currentProject)}, 3000);
+            slideIndex++;
+          }
+          
+        }
+      </script>
+      
+      

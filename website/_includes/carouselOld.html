@@ -1,0 +1,12 @@
+{% capture path %}{{ include.path }}/{{ include.type }}{% endcapture %}
+
+<ul class="carousel">
+  {% for item in site.static_files %}
+    {% if item.path contains path %}
+      <li>
+        <img src="{{ item.path }}" alt="{{ item.basename }}">
+      </li>
+    {% endif %}
+  {% endfor %}
+  <li></li>
+</ul>

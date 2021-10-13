@@ -1,0 +1,282 @@
+.navbar {
+  .navbar-brand {
+    svg {
+      fill: $blue;
+      height: 32px;
+    }
+  }
+
+  @include touch {
+    background-color: $blue;
+
+    .navbar-brand {
+      .navbar-item {
+        padding: 16px 16px 4px 24px;
+      }
+
+      svg {
+        fill: $white;
+      }
+    }
+
+    .burger {
+      span {
+        background-color: $white;
+        height: 2px;
+        // width: 24px;
+      }
+    }
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+    color: $white;
+    font-weight: $weight-semibold;
+    margin-left: 24px;
+    width: 170px;
+
+    @include desktop {
+      width: 165px;
+      font-size: $size-8;
+      color: $blue;
+      border-left: 1px solid $blue;
+      padding-left: 8px;
+      line-height: 14px;
+      margin-left: 4px;
+    }
+  }
+
+  &.is-primary {
+    font-size: $size-7;
+    font-weight: $weight-semibold;
+    min-height: 0;
+
+    .container {
+      min-height: 0;
+
+      @include desktop {
+        min-height: 51px;
+      }
+
+      .navbar-menu {
+        background-color: $blue;
+        padding: 0;
+        margin-top: -90px;
+
+        @include desktop {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .navbar-start {
+      padding: 0 24px 16px;
+
+      @include desktop {
+        padding: 0;
+      }
+      
+      > .navbar-item {
+        margin-bottom: 16px;
+        border-radius: 4px;
+        overflow: hidden;
+        
+        .navbar-link, &:not(.has-dropdown) {
+          background-color: $blue-dark;
+          color: $white;
+          font-size: $size-6;
+          padding: 16px;
+
+          &.is-active {
+            color: #a5c9ff;
+          }
+
+          &:after {
+            border-color: $white;
+            border-width: 2px;
+          }
+        }
+
+        .navbar-dropdown {
+          background-color: $blue-dark;
+          border-top: 0;
+          padding: 0 16px 8px;
+          
+          .navbar-item {
+            color: $white;
+            border-top: 1px solid $blue;
+            padding: 12px 8px;
+
+            &:hover {
+              background-color: transparent;
+              text-decoration: underline;
+            }
+
+            &.is-active {
+              background-color: $blue-dark;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        @include desktop {
+          margin-bottom: 0;
+          overflow: visible;
+          margin-left: -16px;
+          margin-right: 16px;
+          
+          &:hover {
+            .navbar-link {
+              background-color: $blue-dark;
+              color: #a5c9ff;
+            }
+          }
+
+          .navbar-link, &:not(.has-dropdown) {
+            background-color: $blue;
+            font-size: $size-7;
+          }
+
+          .navbar-link {
+            padding-right: 2.25rem;
+          }
+
+          .navbar-dropdown {
+            padding: 0 8px 8px;
+            
+            .navbar-item {
+              border-top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .navbar-end {
+      align-items: center;
+
+      .small {
+        font-weight: $weight-normal;
+        font-size: 10px;
+        text-align: right;
+      }
+    }
+  }
+
+  &.nav-top {
+    min-height: 96px;
+
+    @include desktop {
+      min-height: 85px;
+    }
+
+    .container {
+      align-items: center;
+
+      .navbar-end {
+        margin-top: 16px;
+        padding: 16px 0 0 24px;
+        background-color: $grey-light;
+        height: 90px;
+        
+        @include desktop {
+          height: auto;
+          background-color: transparent;
+          margin-top: 0;
+          padding: 0;
+        }
+        
+        img:not(:first-child) {
+          margin-left: 32px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  font-size: $size-8;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  .navbar {
+    min-height: 30px;
+    background-color: transparent;
+    margin-bottom: 27px;
+
+    .navbar-brand {
+      min-height: 26px;
+      align-items: center;
+
+      .navbar-item {
+        @include touch {
+          padding-left: 0;
+        }
+      }
+
+      svg {
+        width: 90px;
+        fill: $grey-dark;
+      }
+    }
+
+    .navbar-menu {
+      background-color: transparent;
+      box-shadow: none;
+
+      @include mobile {
+        border-top: 1px solid #acacac;
+        margin-top: 16px;
+      }
+
+      .navbar-end {
+        display: flex;
+        flex-wrap: wrap;
+
+        .navbar-item {
+          color: $grey-dark;
+          flex: 1 0 50%;
+          padding: 6px 0;
+
+          @include tablet {
+            padding: 6px 12px;
+            flex: 1 0 12.5%;
+          }
+
+          @include desktop {
+            flex: none;
+          }
+
+          &:hover {
+            background-color: transparent;
+            color: $black;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .copyright {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .column:first-child {
+        border-top: 1px solid #acacac;
+      }
+    }
+  }
+}
+
+.section {
+  &:first-child {
+    padding-top: 0;
+  }
+}

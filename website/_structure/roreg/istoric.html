@@ -1,0 +1,92 @@
+---
+agentii:
+  - nume: Agenția pentru Dezvoltare Regionala Nord-Est
+    sediu: Piatra Neamț, str. Lt. Drăghescu nr. 9, județul Neamț
+    director: Vasile Asandei
+  - nume: Agenția pentru Dezvoltare Regională Sud-Est
+    sediu: Brăila, str. Anghel Saligny nr. 24, județul Brăila
+    director: Luminița Mihailov
+  - nume: Agenția pentru Dezvoltare Regională Sud-Muntenia
+    sediu: Călărași, str. C-tin Pantazi, nr. 7A, județul Călărași
+    director: Liviu Mușat
+  - nume: Agenția pentru Dezvoltare Regională Sud-Vest Oltenia
+    sediu: Craiova, Aleea Teatrului nr. 1, județul Dolj
+    director: Marilena Bogheanu
+  - nume: Agenția pentru Dezvoltare Regională Vest
+    sediu: Timișoara, str. Gheorghe Lazăr, nr.14, județul Timiș
+    director: Sorin Maxim
+  - nume: Agenția pentru Dezvoltare Regională Nord-Vest
+    sediu: Sat Rădaia nr. 50, Comuna Baciu, județul Cluj
+    director: Sanda Cătană
+  - nume: Agenția pentru Dezvoltare Regională Centru
+    sediu: Alba Iulia, str. Decebal, nr. 12, județul Alba
+    director: Simion Crețu
+  - nume: Agenția pentru Dezvoltare Regionala Bucuresti-Ilfov
+    sediu: str. Mihai Eminescu nr.163, et. 2, sector 2, București
+    director: Dan Dumitru Nicula
+obiective:
+  - Asigurarea reprezentativității la nivel național și internațional a celor 8 Agenții pentru Dezvoltare Regională;
+  - Întărirea capacității administrative și instituționale a Agențiilor pentru Dezvoltare Regională;
+  - Îmbunătățirea legislației în domeniul dezvoltării regionale în România;
+  - Crearea unei atitudini favorabile dezvoltării regionale în rândul cetățenilor, adminsitrației publice locale și centrale, a altor instituții și organizații de interes public;
+  - Armonizarea sistemelor de organizare, lucru și comunicare între cele 8 ADR-uri și în raport cu alte instituții naționale sau internaționale;
+  - Formularea unor poziții comune în raport cu diverse tematici în care sunt implicate cele 8 Agenții;
+  - Sensibilizarea opiniei publice asupra instrumentelor pentru dezvoltare regională.
+---
+
+<p style="text-align: justify;">
+  Asociația agențiilor pentru dezvoltare regională din România – ROREG a fost
+  înfințată în anul 2005 ca organism neguvernamental, cu directoralitate
+  juridică de drept privat, fără caracter politic, în conformitate cu OUG nr.
+  26/2000 cu privire la asociații și fundații și cu Legea nr. 315/2004 privind
+  dezvoltarea regională în România.
+</p>
+<p style="text-align: justify;">
+  Asociația ROREG are drept membri cele 8 Agenții pentru Dezvoltare Regională
+  din fiecare regiune de dezvoltare a României:
+</p>
+
+<ul>
+  {% for agentie in page.agentii %}
+  <li>
+    <span class="semibold-primary">{{ agentie.nume }}</span> <br />
+    Sediu: {{ agentie.sediu }} <br />
+    Director general: {{ agentie.director }}
+  </li>
+  {% endfor %}
+</ul>
+
+<p style="text-align: justify;">
+  Sediul Asociației ROREG este în Timișoara, str. Proclamația de la Timișoara,
+  nr.5, județul Timiș.
+</p>
+<p style="text-align: justify;">
+  Scopul Asociației ROREG este de a reprezenta interesele celor 8 Agenții pentru
+  Dezvoltare Regională la nivel național, cât și la nivel internațional, în
+  vederea sprijinirii dezvoltării lor instituționale și a promovării unei
+  abordări comune și unitare în ceea ce privește dezvoltarea regională și
+  implementarea programelor cu finanțare europeană.
+</p>
+<p>
+  Conform Statutului Asociației ROREG, aceasta are următoarele obiective:
+</p>
+
+<ul style="text-align: justify;">
+  {% for item in page.obiective %}
+  <li>{{ item }}</li>
+  {% endfor %}
+</ul>
+
+<p style="text-align: justify;">
+  De-a lungul anilor de funcționare, Asociația ROREG a crescut constant, reușind
+  să susțină și să promoveze la nivel național interesele comune ale ADR-urilor
+  și să asigure reprezentativitatea regiunilor în diverse structuri naționale.
+  De asemenea, a acumulat o bogată experiență de colaborare și cooperare între
+  regiuni, prin dezvoltarea unor mecanisme formale armonizate de lucru și
+  comunicare.
+</p>
+<p style="text-align: justify;">
+  Pentru viitoarea perioadă de programare 2021-2027, activitatea Asociației
+  ROREG va fi cu atât mai importantă cu cât cele 8 ADR-uri vor fi Autorități de
+  Management pentru Programele Operaționale Regionale.
+</p>

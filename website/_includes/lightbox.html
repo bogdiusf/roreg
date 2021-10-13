@@ -1,0 +1,23 @@
+{% capture path %}{{ include.path }}/{{ include.type }}{% endcapture %}
+
+<div class="lb-gallery">
+  <div class="columns is-multiline is-hidden-mobile">
+    {% for item in site.static_files %}
+      {% if item.path contains path %}
+        {% unless item.path contains 'thumbs' %}
+        <div class="column is-6-tablet is-3-desktop">
+          <a data-fslightbox="fsl-{{ path }}" href="{{ item.path }}">
+            {% capture thumb %}thumbs/thumb_{{ item.name }}{% endcapture %}
+            <img src="{{ item.path | replace: item.name, thumb }}" alt="{{ item.path+' ' +item.basename }}">
+          </a>
+        </div>
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="is-hidden-desktop">
+    <br>
+    <button class="button is-primary is-fullwidth" onclick="fsLightboxInstances['fsl-{{ path }}'].open(0)">Vezi galerie</button>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@keyframes spinAround { from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); } }
+
+#head .about { color: #FFFFFF; background-color: #1E4D95; border-color: #1E4D95; padding: 16px 20px 24px; z-index: 3; position: relative; margin-top: -56px; }
+
+#head .about p { font-size: 14px; margin-bottom: 16px; }
+
+@media screen and (min-width: 1008px) { #head .about p { font-size: inherit; } }
+
+@media screen and (min-width: 1008px) { #head .about { margin-top: -120px; max-width: 570px; margin-left: auto; margin-right: 32px; } }
+
+@media screen and (max-width: 1007px) { #main { padding-top: 0; } }
+
+@media screen and (min-width: 1008px) { #map { background-color: #ededed; } }
+
+#map h2 { margin: 16px 0 0; }
+
+#map .cards { padding-top: 56px; }
+
+#map .card { background-color: transparent; border: 1px solid #1E4D95; border-radius: 4px; }
+
+#map .card .button { width: 100%; justify-content: space-between; border: 0; border-radius: 0; }
+
+#map .card .button:focus { color: inherit; background-color: transparent; box-shadow: none; }
+
+#map .card .card-content { font-size: 14px; display: none; padding: 0 16px 24px; }
+
+#map .card .card-content .address { margin-bottom: 8px; }
+
+#map .card .card-content a:not(:hover) { text-decoration: none; }
+
+#map .card .card-content ion-icon { padding-right: 16px; }
+
+#map .card.is-active { background-color: #1E4D95; color: #FFFFFF; }
+
+#map .card.is-active a, #map .card.is-active .button { color: #FFFFFF; }
+
+#map .card.is-active .card-content { display: block; }
+
+#map .card.is-active .icon > * { transform: rotate(180deg); }
+
+#map .card + .card { margin-top: 8px; }
+
+#map svg > g { cursor: pointer; }
+
+#map svg #Outlines, #map svg #Region_tags, #map svg #Counties { pointer-events: none; }
+
+#map svg #Regiuni path, #map svg #Regiuni polygon { transition: fill 0.15s; }
+
+#map svg #Regiuni .is-active { fill: #1E4D95; }
+
+#map svg #Region_tags .is-active text { fill: #1E4D95; }
+
+#map svg #Region_tags .is-active rect, #map svg #Region_tags .is-active path { fill: #FFFFFF; }
+
+#map svg #Counties .is-active text { fill: #FFFFFF; }
+
+.highlight { border-radius: 4px; background-color: #1E4D95; color: #FFFFFF; padding: 20px 20px 24px; font-size: 14px; }
+
+@media screen and (min-width: 1008px) { .highlight { padding: 32px 48px 56px; margin: 40px 0 80px; font-size: 1rem; } }
+
+.highlight h2 { margin-bottom: 24px; }
+
+.footer-addon { background-color: #FFFFFF; padding: 24px; color: #585858; font-size: 14px; margin: 0 -24px -80px; }
+
+@media screen and (min-width: 1008px) { .footer-addon { margin: 0 0 -120px; } }
+
+/*# sourceMappingURL=home.css.map */

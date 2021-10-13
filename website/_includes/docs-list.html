@@ -1,0 +1,14 @@
+<div class="docs-list">
+  {% for item in include.list %}
+    <div class="item box">
+      <ion-icon class="icon" name="document-outline"></ion-icon>
+      
+      <div class="title">
+        <span class="has-text-weight-semibold">{{ item.title }}</span> <br>
+        {% if item.subtitle %}{{ item.subtitle }}{% endif %}
+      </div>
+
+      <a download href="/assets/files/downloads/{{ item.file }}" class="button is-primary is-outlined" target="_blank">Descarcă</a>
+    </div>
+  {% endfor %}
+</div>

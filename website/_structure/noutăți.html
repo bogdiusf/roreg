@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="container">
+  <h2 class="heading">{{ page.title }}</h2>
+
+  <div class="columns is-multiline" id="news">
+    {% for item in site.posts %}
+      <div class="column is-6">
+        {% include news-box.html post=item %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

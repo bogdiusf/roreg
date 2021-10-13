@@ -1,0 +1,105 @@
+---
+---
+
+@charset "utf-8";
+@import 'variables';
+
+// Import only what you need from Bulma
+@import '../../node_modules/bulma/sass/base/_all.sass';
+@import '../../node_modules/bulma/sass/elements/box.sass';
+@import '../../node_modules/bulma/sass/elements/button.sass';
+@import '../../node_modules/bulma/sass/elements/container.sass';
+@import '../../node_modules/bulma/sass/elements/content.sass';
+@import '../../node_modules/bulma/sass/elements/table.sass';
+@import '../../node_modules/bulma/sass/components/navbar.sass';
+@import '../../node_modules/bulma/sass/components/card.sass';
+@import '../../node_modules/bulma/sass/components/tabs.sass';
+@import '../../node_modules/bulma/sass/grid/columns.sass';
+@import '../../node_modules/bulma/sass/form/shared.sass';
+@import '../../node_modules/bulma/sass/form/input-textarea.sass';
+@import '../../node_modules/bulma/sass/form/select.sass';
+@import '../../node_modules/bulma/sass/layout/footer.sass';
+@import '../../node_modules/bulma/sass/layout/section.sass';
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+#main {
+  padding: 40px 24px 80px;
+  flex: 1;
+
+  @include desktop {
+    padding: 40px 0 120px;
+  }
+}
+
+@media (max-width:750px)
+{
+  #main .container #head .latest{
+    width: 101vw;
+    margin-left: -4.5vw;
+  }
+}
+
+@media(max-width:414px)
+{
+  #main .container #head .latest{
+    width: 101vw;
+    margin-left: -5.75vw;
+  }
+}
+
+@media (max-width:411px){
+  
+  #main .container #head .latest{
+    width: 101vw;
+    margin-left: -5.75vw;
+  }
+}
+
+@media (max-width:400px){
+  
+  #main .container #head .latest{
+    width: 101vw;
+    margin-left: -6.5vw;
+  }
+}
+
+@media (max-width:360px){
+  
+  #main .container #head .latest{
+    width: 101vw;
+    margin-left: -6.75vw;
+  }
+}
+
+@media (max-width:320px){
+  
+  #main .container #head .latest{
+    width: 101vw;
+    margin-left: -7.5vw;
+  }
+}
+
+
+.container {
+  max-width: 1000px;
+
+  .page-container {
+    max-width: 652px;
+    text-align: justify;
+  }
+}
+
+@import 'typo';
+@import 'layout';
+@import 'components';
+
+@import '../../node_modules/tiny-slider/src/tiny-slider.scss';

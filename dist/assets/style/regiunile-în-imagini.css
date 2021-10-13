@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@keyframes spinAround { from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); } }
+
+.gallery { margin-top: 40px; }
+
+/*# sourceMappingURL=regiunile-în-imagini.css.map */

@@ -1,0 +1,11 @@
+<div class="section" id="news">
+  <h2 class="heading">Ultimele noutăți</h2>
+  
+  <div class="columns">
+    {% for item in site.posts limit: 3 %}
+    <div class="column is-4">
+      {% include news-box.html post=item %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

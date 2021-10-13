@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="container">
+  {% if page.title != '' %}
+  <div class="page-container">
+    <h2 class="heading">{{ page.title }}</h2>
+
+    <div class="content">
+      {{ content }}
+    </div>
+  </div>
+  {% else %}
+    {{ content }}
+  {% endif %}
+</div>

@@ -1,0 +1,12 @@
+<a href="{{ include.post.url }}" class="box">
+  <p class="date">
+    {{ include.post.date | date: '%d.%m.%Y' }}
+    {% if include.post.tag %}| {{ include.post.tag }}{% endif %}
+  </p>
+  <p class="title">
+    <span class="has-font-weight-semibold">{{ include.post.title }}</span>
+  </p>
+  <div class="small">
+    {{ include.post.excerpt | strip_html | slice: 0, 120 | append: '...' }}
+  </div>
+</a>
